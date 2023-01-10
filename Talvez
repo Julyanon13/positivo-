@@ -1,0 +1,21 @@
+-- Declara a função de anúncio
+function anunciar(mensagem)
+    print(mensagem)  -- Imprime a mensagem de anúncio para todos os jogadores
+end
+
+-- Define a variável de controle do loop
+loop_ativo = true
+
+-- Cria o loop de anúncio
+while loop_ativo do
+    -- Chama a função de anúncio
+    anunciar("Este é um anúncio!")
+    
+    -- Pausa o script por 10 segundos antes de continuar o loop
+    sleep(10)
+    
+    -- Verifica se o loop deve ser interrompido
+    if verificar_comando_parar_loop() then
+        loop_ativo = false  -- Interrompe o loop
+    end
+end
